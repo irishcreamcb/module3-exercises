@@ -266,6 +266,10 @@ INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\iwona\ex-iwona
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\iwona\rm-iwona.enc
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\iwona\mi-iwona.enc
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\iwona\sy-iwona.enc
+INPUT .\nerd_maddy.png
+INPUT .\nerd_maddy.png
+INPUT .\nerd_maddy.png
+INPUT .\nerd_maddy.png
 INPUT module3-exercises.aux
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwonacl.pfb
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwonacl.pfb
@@ -273,3 +277,7 @@ INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwon
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwonacli.pfb
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwonacm.pfb
 INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\nowacki\iwona\iwonacm.pfb
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\Noah\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

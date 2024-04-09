@@ -30,6 +30,13 @@
     \begin{proof}[Solution]
 }{\end{proof}}
 
+\makeatletter
+\newcommand*{\defeq}{\mathrel{\rlap{%
+                     \raisebox{0.3ex}{$\m@th\cdot$}}%
+                     \raisebox{-0.3ex}{$\m@th\cdot$}}%
+                     =}
+\makeatother
+
 \begin{document} 
 
 \section*{How to Use this Reviewer}
@@ -86,8 +93,235 @@ As a final note, these are not replacements for the modules/paying attention in 
 read the basics, so don't treat these reviewers as your only source of information. Our teachers spends a lot of time on the handouts, they're really good! (except when they're wrong) With that, though, I think 
 I've covered all pertinent points. Good luck, and happy studying!
 
-\section*{3.1.1: Linear Combinations}
+\section*{3.1.1: Linear combinations}
 \textit{Some notes on notation: I'm not a big fan of the boldface lowercase letters representing matrices, particularly vectors, mostly because it's a little difficult to tell and I don't 
-particularly like how it looks with the font I'm using, so I'll be using the arrow on top instead to denote vectors.}
+particularly like how it looks with the font I'm using, so I'll be using the arrow on top instead to denote vectors.}\par
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        Instructions for items \#1 to \#6: For each set of vectors \(V\) and given vector \(\overrightarrow{w}\), determine if \(\overrightarrow{w}\) can be expressed as a linear combination of the vectors in \(V\). 
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            1\\-1
+        \end{pmatrix},\begin{pmatrix}
+            2\\3
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        30\\30
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out if there exist two coefficients \(k_1\) and \(k_2\) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \overrightarrow{w}\).
+        Expressing it in a linear equation like this, we can then solve for the coefficients using Gaussian elimination, like so\[
+            \begin{pmatrix}
+                1&2 \\ -1&3
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                30\\30
+            \end{pmatrix} \Longleftrightarrow \begin{pmatrix}
+                1&2 \\ 0&1
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                30\\12
+            \end{pmatrix}.
+        \] This tells us that \(k_2 =12\), and substituting this into the first row gives us \(k_1=6\). Thus, there exists a unique linear combination of vectors in \(V\) that we can express \(\overrightarrow{w}\) as. 
+    \end{solution}
+    \begin{minipage}{.14\textwidth}
+        \vspace{0pt}
+        \includegraphics[width=2cm]{nerd_maddy.png}
+    \end{minipage}%
+    \fbox{
+    \begin{minipage}{.76\textwidth}
+        \vspace{0pt}
+        \textbf{Nerd Interjection!} The Gaussian elimination here is fairly straightforward since we're just dealing with two variables and two equations, so I won't bother mucking up the pages with all the steps. I might elaborate a little
+        bit more later on, when we get to the sets with vectors in \(\mathbb{R}^3\), but for these first three at least, it shouldn't be too hard to see how we got from one step to the next.  
+    \end{minipage}%
+    }
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            1\\-2
+        \end{pmatrix},\begin{pmatrix}
+            -2\\4
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        -10\\20
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out if there exist two coefficients \(k_1\) and \(k_2\) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \overrightarrow{w}\).
+        Expressing it in a linear equation like this, we can then solve for the coefficients using Gaussian elimination, like so:\[
+            \begin{pmatrix}
+                1&-2 \\ -2&4
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                -10\\20
+            \end{pmatrix} \Longleftrightarrow \begin{pmatrix}
+                1&-2 \\ 0&0
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                -10\\0
+            \end{pmatrix}.
+        \] This tells us that there are infinitely many solutions, and thus, infinitely many linear combinations of vectors in \(V\) that we can express \(\overrightarrow{w}\) as. If we let \(k_2\defeq r,~r\in\mathbb{R}\), then \(k_1 = 2r -10\).
+    \end{solution}
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            1\\-2
+        \end{pmatrix},\begin{pmatrix}
+            -2\\4
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        1\\-3
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out if there exist two coefficients \(k_1\) and \(k_2\) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \overrightarrow{w}\).
+        Expressing it in a linear equation like this, we can then solve for the coefficients using Gaussian elimination, like so:\[
+            \begin{pmatrix}
+                1&-2 \\ -2&4
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                1\\-3
+            \end{pmatrix} \Longleftrightarrow \begin{pmatrix}
+                1&-2 \\ 0&0
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                1\\-1
+            \end{pmatrix}.
+        \] This tells us that there is no solution, or that there is no possible linear combination of vectors in \(V\) that we can express \(\overrightarrow{w}\) as. Wow! Three for three on the three cases of solutions! That's totally not intentional. 
+    \end{solution}
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            2\\-1\\3
+        \end{pmatrix},\begin{pmatrix}
+            5\\0\\4
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        -1\\-2\\2
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out if there exist two coefficients \(k_1\) and \(k_2\) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \overrightarrow{w}\).
+        Expressing it in a linear equation like this, we can then solve for the coefficients using Gaussian elimination, like so:\[
+            \begin{pmatrix}
+                2&5\\-1&0\\3&4
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                -1\\-2\\2
+            \end{pmatrix}.
+        \] By inspection, though, we can see that from the second row, \(-k_1 = -2\), so \(k_1 = 2\).\footnote{LOL, I said I'd be more detailed with the Gaussian elimination but we don't even have to do it for these first two items. Love it!} Substituting this into either of the other two rows gives us \(k_2 = -1\). Thus, there exists a unique linear combination of vectors in \(V\) that 
+        we can express \(\overrightarrow{w}\) as. 
+    \end{solution}
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            2\\-1\\3
+        \end{pmatrix},\begin{pmatrix}
+            5\\0\\4
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        1\\1\\-1
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out if there exist two coefficients \(k_1\) and \(k_2\) (I'm getting so bored of saying that) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \overrightarrow{w}\). Then, \[
+            \begin{pmatrix}
+                2&5\\-1&0\\3&4
+            \end{pmatrix}\begin{pmatrix}
+                k_1\\k_2
+            \end{pmatrix} = \begin{pmatrix}
+                1\\1\\-1
+            \end{pmatrix}.
+        \] By inspection, we can see that from the second row, \(-k_1 = 1\), so \(k_1 = -1\). However, substituting this into the other two rows gives us different answers, namely \(k_2 = 0.6\) and \(k_2 = 0.5\).\ \(k_2\) can't have two values, 
+        so this is a contradiction, implying that there is no solution, and that \(\overrightarrow{w}\) cannot be expressed as a linear combination of vectors in \(V\). 
+    \end{solution}
+    \item \(V = \begin{Bmatrix}
+        \begin{pmatrix}
+            2\\-1\\3
+        \end{pmatrix},\begin{pmatrix}
+            5\\0\\4
+        \end{pmatrix},\begin{pmatrix}
+            3\\1\\1
+        \end{pmatrix}
+    \end{Bmatrix}; \qquad \overrightarrow{w} = \begin{pmatrix}
+        1\\-8\\12
+    \end{pmatrix}\)\begin{solution}
+        We need to figure out of there exist \textit{three} (YIPPIE!) coefficients \(k_1\), \(k_2\), and \(k_3\) such that \(k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} + k_3\overrightarrow{v_3} = \overrightarrow{w}\). Expressing it in a linear
+        equation like this, we can then solve for the coefficients using Gaussian elimination, like so (let's actually go through the Gaussian elimination for this one):\begin{align*} 
+            \begin{pmatrix}
+                2&5&3\\-1&0&1\\3&4&1
+            \end{pmatrix} \begin{pmatrix}
+                k_1\\k_2\\k_3
+            \end{pmatrix} &= \begin{pmatrix}
+                1\\-8\\12
+            \end{pmatrix} &\begin{matrix}\\2R_2 + R_1 \implies R_1\\3R_2 + R_3 \implies R_3 \end{matrix}&&\begin{pmatrix}
+                0&5&5\\-1&0&1\\0&4&4
+            \end{pmatrix} \begin{pmatrix}
+                k_1\\k_2\\k_3
+            \end{pmatrix} &= \begin{pmatrix}
+                -15\\-8\\-12
+            \end{pmatrix}\\
+            &&  \begin{matrix}\\\frac{1}{5}R_1 \implies R_1\\\frac{1}{4}R_3 \implies R_3 \end{matrix}&&\begin{pmatrix}
+                0&1&1\\-1&0&1\\0&1&1
+            \end{pmatrix} \begin{pmatrix}
+                k_1\\k_2\\k_3
+            \end{pmatrix} &= \begin{pmatrix}
+                -3\\-8\\-3
+            \end{pmatrix}.
+        \end{align*} We see here that there are two identical rows, which should already clue us in to the fact that there are infinitely many solutions. Thus, if we choose \(k_3 \defeq r,~r\in\mathbb{R}\), then \(k_2=-r-3\) and \(k_1=r+8\).
+    \end{solution}
+\end{enumerate}
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        Instructions for items \#7 to \#10: Each of the following sets of vectors \(\lbrace\overrightarrow{v_1},\overrightarrow{v_2}\rbrace\) below is special in that any vector \((x,y) \in \mathbb{R}^2 \) can be uniquely 
+        expressed as a linear combination of \(\overrightarrow{v_1}\) and \(\overrightarrow{v_2}\). Find the \textit{coefficients} \(k_1\) and \(k_2\) in terms of \(x\) and \(y\) such that\[
+            k_1\overrightarrow{v_1} + k_2\overrightarrow{v_2} = \begin{pmatrix}
+                x\\y
+            \end{pmatrix}.
+        \]
+    \end{minipage}
+    }\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{6}
+    \item \(\overrightarrow{v_1} = \begin{pmatrix}
+        4\\3
+    \end{pmatrix},\qquad\overrightarrow{v_2} = \begin{pmatrix}
+        1\\1
+    \end{pmatrix}\)\begin{solution}
+        
+    \end{solution}
+    \item \(\overrightarrow{v_1} = \begin{pmatrix}
+        7\\2
+    \end{pmatrix},\qquad\overrightarrow{v_2} = \begin{pmatrix}
+        3\\1
+    \end{pmatrix}\)\begin{solution}
+        
+    \end{solution}
+    \item \(\overrightarrow{v_1} = \begin{pmatrix}
+        3\\-1
+    \end{pmatrix},\qquad\overrightarrow{v_2} = \begin{pmatrix}
+        5\\2
+    \end{pmatrix}\)\begin{solution}
+        
+    \end{solution}
+    \item \(\overrightarrow{v_1} = \begin{pmatrix}
+        5\\-1
+    \end{pmatrix},\qquad\overrightarrow{v_2} = \begin{pmatrix}
+        -2\\3
+    \end{pmatrix}\)\begin{solution}
+        
+    \end{solution}
+\end{enumerate}
+\pagebreak 
+
+\section*{3.1.2: Norm and dot product}
+\textit{We learned about this stuff in calculus so it shouldn't be that new, but to be honest I've forgotten everything since vectors were an afterthought in 30.24, so here's a refresher, I guess.}
+\pagebreak
+
+\section*{3.1.3: Standard matrices of linear transformations}
+\textit{Oh no! Drawings! Fuck! Even if it's kind of a pain, I'd much rather do all the graphs in \LaTeX{} than use some external graphing software and take screenshots. I'm pretty familiar with tikz anyway (waw). }
+\pagebreak 
 
 \end{document}
