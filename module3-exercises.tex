@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+\usepackage[a4paper,left=25mm,right=25mm,top=30mm,bottom=30mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumerate} 
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz} 
+\usepackage{cancel}
+\usepackage{parskip}
+\usepackage[condensed,light,math]{iwona}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+
+\title{probability exercises}
+\author{emilianna louise abundo limlengco} 
+\date{\today} 
+
+\fboxsep=4pt
+\RenewDocumentCommand{\footnoterule}{}{\vfill\kern-3pt \hrule width 0.4\columnwidth\kern2.6pt} %yoinked from LSE
+
+\RenewDocumentCommand{\labelitemi}{}{$\rightarrow$}
+\RenewDocumentCommand{\labelenumi}{}{\colorbox{pink}{\textbf{\arabic{enumi}}}}
+\RenewDocumentCommand{\labelenumii}{}{\colorbox{CornflowerBlue!50}{\textbf{\alph{enumii}}}}
+
+\NewDocumentEnvironment{solution}{}{%
+    \RenewDocumentCommand{\qedsymbol}{}{$\blacksquare$}
+    \begin{proof}[Solution]
+}{\end{proof}}
+
+\begin{document} 
+
+\section*{How to Use this Reviewer}
+Hello! This is a compilation of solved exercises for module 3 of MATH 51.4. All of these exercises are taken straight from Aldrich and Cisco's course notes, so you can expect tests 
+to be very similar to the items given. Some items are bound to be a little bit trickier than others, so I'll note when these items show up.\par Normal items will look like this:\begin{enumerate} 
+    \item A very easy math problem. What's 1 + 1?
+\end{enumerate} 
+whereas difficult problems will be soulless, like this:\begin{enumerate}\setcounter{enumi}{1}
+    \RenewDocumentCommand{\labelenumi}{}{\fcolorbox{magenta}{white}{\textbf{\arabic{enumi}}}}
+    \item A very difficult math problem. Prove that $\displaystyle \binom{2n}{n} < 2^{2n-2},~\forall n \geq 5$ using induction. 
+\end{enumerate} I might also include warnings in my \textbf{Nerd Interjections!}\par
+\parindent=25pt \begin{minipage}[t]{.14\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=2cm]{nerd_maddy.png}
+\end{minipage}%
+\fbox{
+\begin{minipage}[t]{.76\textwidth}
+    \vspace{0pt}
+    \textbf{Nerd Interjection!}\footnote{Image from @Ellem\_\_ on Twitter.} These sections are for me to remind you of some necessary information to solve the problems, elaborate on 
+    something that I think isn't all that clear with just pure math symbols, give a helpful theorem, be an annoying piece of shit, anything, really! Just think of it as a tips and tricks section. 
+\end{minipage}%
+}\parindent=0pt \par I also have another section called \textbf{Can we Prove it?} (unfortunately lacking a cute picture to go along with it), where I include some interesting, not really necessary, but 
+nonetheless relevant proofs. So far, these two are my only two gimmicks, but I might add more in the future.\par
+\fbox{\begin{minipage}[t]{0.98\textwidth}
+    \vspace{0pt} 
+    \textbf{Can we Prove it?} This is just a random proof I yoinked from our homeworks.\begin{proof} 
+        ($ \implies $) Let $ x \in (A \cap B) \setminus C $. Then, $ x \in (A \cap B)$ and $ x \notin C $. \\
+        \phantom{($ \implies $)} Since $x \in (A \cap B)$, $ x \in A$ and $ x \in B$. \\
+        \phantom{($ \implies $)} Since $x \in A$ and $x \notin C$, $x \in (A \setminus C) $. \\
+        \phantom{($ \implies $)} Since $x \in B$ and $x \notin C$, $x \in (B \setminus C) $. \\
+        \phantom{($ \implies $)} Thus, $x \in (A \setminus C) \cap (B \setminus C) $. \\ 
+        \\
+        ($ \impliedby $) Let $ x \in (A \setminus C) \cap (B \setminus C) $. Then, $ x \in (A \setminus C) $ and $ x \in (B \setminus C) $. \\ 
+        \phantom{($ \impliedby $)} Since $ x \in (A \setminus C) $, $ x \in A $ and $ x \notin C $. \\
+        \phantom{($ \impliedby $)} Since $ x \in (B \setminus C) $, $ x \in B $ and $ x \notin C $. \\
+        \phantom{($ \impliedby $)} Since $ x \in A $ and $ x \in B $, $ x \in (A \cap B) $. \\
+        \phantom{($ \impliedby $)} Thus, $ x \in (A \cap B) \setminus C $. \\
+        \\ 
+        Since both sides of the conditional are true, it holds that $ (A \cap B) \setminus C = (A \setminus C) \cap (B \setminus C) $. 
+    \end{proof} 
+\end{minipage}%
+}\par
+Finally, there are blue boxes to indicate when instructions aren't obvious from the question itself, or if there are similar items that can be grouped together.\par
+\parindent=25pt 
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        For items \#7 to \#12, we need to reevaluate our life decisions.
+    \end{minipage}
+    }\parindent=0pt \par 
+It's very important to note that this is a \textit{work in progress!} I am human, and I will make mistakes, and I cannot finish doing all the exercises within the span of one day. If you spot anything wrong, 
+please feel free to message me; I will correct it as soon as possible.\par
+As a final note, these are not replacements for the modules/paying attention in class, these are supplements for them. I won't explain all the topics here, and I'll assume that you at least have 
+read the basics, so don't treat these reviewers as your only source of information. Our teachers spends a lot of time on the handouts, they're really good! (except when they're wrong) With that, though, I think 
+I've covered all pertinent points. Good luck, and happy studying!
+
+\section*{3.1.1: Linear Combinations}
+\textit{Some notes on notation: I'm not a big fan of the boldface lowercase letters representing matrices, particularly vectors, mostly because it's a little difficult to tell and I don't 
+particularly like how it looks with the font I'm using, so I'll be using the arrow on top instead to denote vectors.}
+
+\end{document}
