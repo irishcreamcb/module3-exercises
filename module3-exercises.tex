@@ -58,7 +58,8 @@ whereas difficult problems will be soulless, like this:\begin{enumerate}\setcoun
     \textbf{Nerd Interjection!}\footnote{Image from @Ellem\_\_ on Twitter.} These sections are for me to remind you of some necessary information to solve the problems, elaborate on 
     something that I think isn't all that clear with just pure math symbols, give a helpful theorem, be an annoying piece of shit, anything, really! Just think of it as a tips and tricks section. 
 \end{minipage}%
-}\parindent=0pt \par I also have another section called \textbf{Can we Prove it?} (unfortunately lacking a cute picture to go along with it), where I include some interesting, not really necessary, but 
+}\parindent=0pt \par I also have another section called \textbf{Can we Prove it?} (unfortunately lacking a cute picture to go along with it; Mikh 
+was nice enough to edit one up for me, but I haven't been able to format it in a way I like), where I include some interesting, not really necessary, but 
 nonetheless relevant proofs. So far, these two are my only two gimmicks, but I might add more in the future.\par
 \fbox{\begin{minipage}[t]{0.98\textwidth}
     \vspace{0pt} 
@@ -378,13 +379,23 @@ particularly like how it looks with the font I'm using, so I'll be using the arr
     \colorbox{CornflowerBlue!50}{
     \begin{minipage}[c]{0.9\textwidth}
         \centering
-        For each of the following vectors \(\overrightarrow{v}\), find a unit vector \(\hat{v}\) pointing in the same direction as \(\overrightarrow{v}\). 
+        For each of the following vectors \(\overrightarrow{v}\) find a unit vector \(\hat{v}\) pointing in the same direction as \(\overrightarrow{v}\). 
     \end{minipage}
     }
 \end{center}
-To find a unit vector pointing in the same direction, we just divide the vector by its norm. Recall that the norm of a vector in \(\mathbb{R}^n\) is given by \[
-    \big|\!\big|\overrightarrow{v}\big|\!\big| = \sqrt{v_1^2,+ v_2^2 + \cdots + v_n^2}. 
-\]
+
+\begin{minipage}{.14\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=2cm]{nerd_maddy.png}
+\end{minipage}%
+\fbox{
+\begin{minipage}{.76\textwidth}
+    \vspace{0pt}
+    \textbf{Nerd Interjection!} To find a unit vector pointing in the same direction, we just divide the vector by its norm. Recall that the norm of a vector in \(\mathbb{R}^n\) is given by \[
+        \big|\!\big|\overrightarrow{v}\big|\!\big| = \sqrt{v_1^2,+ v_2^2 + \cdots + v_n^2}. 
+    \]
+\end{minipage}%
+}
 \begin{enumerate}
     \setcounter{enumi}{10} 
     \item \(\overrightarrow{v} = (4,3)\)\begin{solution}
@@ -416,16 +427,51 @@ To find a unit vector pointing in the same direction, we just divide the vector 
 \end{center}
 \begin{enumerate}
     \setcounter{enumi}{16}
-    \item \(\overrightarrow{u} = (1,-1), \overrightarrow{v} = (-1,1)\)
-    \item \(\overrightarrow{u} = (0,1,-1,2), \overrightarrow{v} = (1,1,2,2)\)
-    \item \(\overrightarrow{u} = (0,1,0,1), \overrightarrow{v} = (3,3,3,3)\)
-    \item \(\overrightarrow{u} = (1,\sqrt{2},-1,\sqrt{2}), \overrightarrow{v} = (1,-\frac{1}{\sqrt{2}},1,-\frac{1}{\sqrt{2}})\)
-    \item Consider the vector \(\overrightarrow{v} = (-1,3,0,4)\). Find a vector \(\overrightarrow{u}\) which is twice as long as \(\overrightarrow{v}\) and is pointing in the opposite direction.
+    \item \(\overrightarrow{u} = (1,-1), \overrightarrow{v} = (-1,1)\)\begin{solution}
+        The distance between the vectors is \(\sqrt{{\bigl(1-(-1)\bigr)}^2 + {(-1 -1)}^2} = 2\sqrt{2}\).\par
+        The dot product of the vectors is \(1(-1) + (-1)1 = -2\).\par 
+        The angle between the vectors is \(\cos^{-1} \biggl(\dfrac{-2}{\sqrt{2}\cdot\sqrt{2}}\biggr) = \cos^{-1} (-1) = \pi~\text{rad}\) or \(180^{\circ}\). 
+    \end{solution}
+    \item \(\overrightarrow{u} = (0,1,-1,2), \overrightarrow{v} = (1,1,2,2)\)\begin{solution}
+        The distance between the vectors is \(\sqrt{{(0-1)}^2 + {(1 -1)}^2 + {(-1 -2)}^2 + {(2 -2)}^2} = \sqrt{10}\).\par
+        The dot product of the vectors is \(0(1) + 1(1) + (-1)2 + 2(2) = 3\).\par 
+        The angle between the vectors is \(\cos^{-1} \biggl(\dfrac{3}{\sqrt{6}\cdot\sqrt{10}}\biggr) = \cos^{-1} \biggl(\dfrac{3}{\sqrt{60}}\biggr) \approx 1.173~\text{rad}\) or \(67.213^{\circ}\).\footnote{Cheeky little Aldrich and Cisco making the vectors 4D so we can't
+        just graph them in 2D or 3D space and visually check our answers. ``Just use 3B1B's method for visualizing quaternions!'' Be quiet, Thanie.} 
+    \end{solution}
+    \item \(\overrightarrow{u} = (0,1,0,1), \overrightarrow{v} = (3,3,3,3)\)\begin{solution}
+        The distance between the vectors is \(\sqrt{{(0-3)}^2 + {(1 -3)}^2 + {(0 -3)}^2 + {(1 -3)}^2} = \sqrt{26}\).\par
+        The dot product of the vectors is \(0(3) + 1(3) + 0(3) + 1(3) = 6\).\par 
+        The angle between the vectors is \(\cos^{-1} \biggl(\dfrac{6}{\sqrt{2}\cdot6}\biggr) = \cos^{-1} \biggl(\dfrac{1}{\sqrt{2}}\biggr) = \dfrac{\pi}{4}~\text{rad}\) or \(45^{\circ}\).
+    \end{solution}
+    \item \(\overrightarrow{u} = (1,\sqrt{2},-1,\sqrt{2}), \overrightarrow{v} = (1,-\frac{1}{\sqrt{2}},1,-\frac{1}{\sqrt{2}})\)\begin{solution}
+        The distance between the vectors is\[
+            \sqrt{{(1-1)}^2 + {\Biggl(\sqrt{2} - \biggl(-\frac{1}{\sqrt{2}}\biggr)\Biggr)}^2 + {(-1-1)}^2 + {\Biggl(\sqrt{2} - \biggl(-\frac{1}{\sqrt{2}}\biggr)\Biggr)}^2} =  \sqrt{13}.
+        \]
+        The dot product of the vectors is \(1(1) + \sqrt{2}\biggl(\dfrac{1}{\sqrt{2}}\biggr) + (-1)1 + \sqrt{2}\biggl(\dfrac{1}{\sqrt{2}}\biggr) = 2\).\par 
+        The angle between the vectors is \(\cos^{-1} \biggl(\dfrac{2}{\sqrt{6}\cdot\sqrt{3}}\biggr) = \cos^{-1} \biggl(\dfrac{2}{3\sqrt{2}}\biggr) \approx 1.080~\text{rad} \) or \(61.874^{\circ}\). 
+    \end{solution}
+    \item Consider the vector \(\overrightarrow{v} = (-1,3,0,4)\). Find a vector \(\overrightarrow{u}\) which is twice as long as \(\overrightarrow{v}\) and is pointing in the opposite direction.\begin{solution}
+        We can start by finding the vector that is pointing in the opposite direction as \(\overrightarrow{v}\) but with the same length, which we can get by negating \(\overrightarrow{v}\). Then, we just multiply this vector by 2 
+        to make its magnitude twice as much. Thus, the vector we want is \(-2\overrightarrow{v} = (2,-6,0,-8)\).\par 
+        We can verify this answer by checking the norm of both vectors. The norm of \(\overrightarrow{v}\) is \(\sqrt{{(-1)}^2 + 3^2 + 0^2 + 4^2} = \sqrt{26}\), while the norm of \(-2\overrightarrow{v}\) is \(\sqrt{2^2 + {(-6)}^2 + 0^2 + {(-8)}^2} = 2\sqrt{26}\), 
+        which is indeed twice the norm of \(\overrightarrow{v}\).
+    \end{solution}
 \end{enumerate}
 \pagebreak
 
 \section*{3.1.3: Standard matrices of linear transformations}
 \textit{Oh no! Drawings! Fuck! Even if it's kind of a pain, I'd much rather do all the graphs in \LaTeX{} than use some external graphing software and take screenshots. I'm pretty familiar with tikz anyway (waw). }
 \pagebreak 
+
+\section*{3.2.1: Transformations on the unit square}
+\textit{blah blah blah} 
+\pagebreak 
+
+\section*{3.2.2: Orthogonality and projection}
+\textit{blah blah blah} 
+\pagebreak 
+
+\section*{3.2.3: Spanning sets}
+\textit{blah blah blah}
 
 \end{document}
