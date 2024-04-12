@@ -95,8 +95,8 @@ read the basics, so don't treat these reviewers as your only source of informati
 I've covered all pertinent points. Good luck, and happy studying!
 
 \section*{3.1.1: Linear combinations}
-\textit{Some notes on notation: I'm not a big fan of the boldface lowercase letters representing matrices, particularly vectors, mostly because it's a little difficult to tell and I don't 
-particularly like how it looks with the font I'm using, so I'll be using the arrow on top instead to denote vectors.}\par
+\textit{Some notes on notation: I'm not a big fan of the boldface lowercase letters representing matrices, particularly vectors, mostly because it's a little difficult to tell (and we love 
+clarity here) so I'll be using the arrow on top instead to denote vectors.}\par
 \begin{center}
     \colorbox{CornflowerBlue!50}{
     \begin{minipage}[c]{0.9\textwidth}
@@ -400,7 +400,7 @@ particularly like how it looks with the font I'm using, so I'll be using the arr
 }
 \begin{enumerate}
     \setcounter{enumi}{10} 
-    \item \(\overrightarrow{v} = (4,3)~\)\footnote{Normally the lack of internal consistency with how vectors are represented would be killing me but I actually like the diversification of math notation. She says, after proclaiming a bold dislike (pun not intended)
+    \item \(\overrightarrow{v} = (4,3)~\)\footnote{\textit{Norm}ally the lack of internal consistency with how vectors are represented would be killing me but I actually like the diversification of math notation. She says, after proclaiming a bold dislike (pun not intended)
     for boldface letters representing vectors. Maybe I need to do some self-reflection.}\begin{solution}
         The norm of \(\overrightarrow{v}\) is \(\sqrt{4^2 + 3^2} = 5\). Thus, \(\hat{v} = \biggl(\dfrac{4}{5}, \dfrac{3}{5}\biggl)\). 
     \end{solution}
@@ -420,6 +420,20 @@ particularly like how it looks with the font I'm using, so I'll be using the arr
         The norm of \(\overrightarrow{v}\) is \(\sqrt{1^2 + 1^2 + 2^2 + 2^2} = \sqrt{10}\). Thus, \(\hat{v} = \biggl(\dfrac{1}{\sqrt{10}}, \dfrac{1}{\sqrt{10}}, \dfrac{2}{\sqrt{10}}, \dfrac{2}{\sqrt{10}}\biggl)\).
     \end{solution}
 \end{enumerate}
+\begin{minipage}{.14\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=2cm]{nerd_maddy.png}
+\end{minipage}%
+\fbox{
+\begin{minipage}{.76\textwidth}
+    \vspace{0pt}
+    \textbf{Nerd Interjection!} Some formulas for vectors in \(\mathbb{R}^n\) (needed for the next page):\begin{gather*}
+        d(\overrightarrow{u}, \overrightarrow{v}) = \big|\!\big| \overrightarrow{u} - \overrightarrow{v} \big|\!\big| = \sqrt{{(u_1 - v_1)}^2 + {(u_2 - v_2)}^2 +\cdots +{(u_n - v_n)}^2} \\
+        \overrightarrow{u} \cdot \overrightarrow{v} = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n \\ 
+        \theta = \cos^{-1} \Biggl(\frac{\overrightarrow{u} \cdot \overrightarrow{v}}{\big|\!\big|\overrightarrow{u}\big|\!\big| \big|\!\big|\overrightarrow{v}\big|\!\big|}\Biggr)
+    \end{gather*}
+\end{minipage}%
+}
 \pagebreak
 \begin{center}
     \colorbox{CornflowerBlue!50}{
@@ -456,8 +470,8 @@ particularly like how it looks with the font I'm using, so I'll be using the arr
     \end{solution}
     \item Consider the vector \(\overrightarrow{v} = (-1,3,0,4)\). Find a vector \(\overrightarrow{u}\) which is twice as long as \(\overrightarrow{v}\) and is pointing in the opposite direction.\begin{solution}
         We can start by finding the vector that is pointing in the opposite direction as \(\overrightarrow{v}\) but with the same length, which we can get by negating \(\overrightarrow{v}\). Then, we just multiply this vector by 2 
-        to make its magnitude twice as much. Thus, the vector we want is \(-2\overrightarrow{v} = (2,-6,0,-8)\).\par 
-        We can verify this answer by checking the norm of both vectors. The norm of \(\overrightarrow{v}\) is \(\sqrt{{(-1)}^2 + 3^2 + 0^2 + 4^2} = \sqrt{26}\), while the norm of \(-2\overrightarrow{v}\) is \(\sqrt{2^2 + {(-6)}^2 + 0^2 + {(-8)}^2} = 2\sqrt{26}\), 
+        to make its magnitude twice as much. Thus, the vector we want is \(\overrightarrow{u} = (2,-6,0,-8)\).\par 
+        We can verify this answer by checking the norm of both vectors. The norm of \(\overrightarrow{v}\) is \(\sqrt{{(-1)}^2 + 3^2 + 0^2 + 4^2} = \sqrt{26}\), while the norm of \(\overrightarrow{u}\) is \(\sqrt{2^2 + {(-6)}^2 + 0^2 + {(-8)}^2} = 2\sqrt{26}\), 
         which is indeed twice the norm of \(\overrightarrow{v}\).
     \end{solution}
 \end{enumerate}
@@ -465,10 +479,224 @@ particularly like how it looks with the font I'm using, so I'll be using the arr
 
 \section*{3.1.3: Standard matrices of linear transformations}
 \textit{Oh no! Drawings! Fuck! Even if it's kind of a pain, I'd much rather do all the graphs in \LaTeX{} than use some external graphing software and take screenshots. I'm pretty familiar with tikz anyway (waw). }
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        For each of the following linear transformations \(T: \mathbb{R}^2 \to \mathbb{R}^2\), sketch and label the following six vectors. Sketch all the premiages in one axis and then all the images in another axis.\par 
+        \textit{Preimages: } \(\mathbf{e}_1\), \(\mathbf{e}_2\), \(\mathbf{e}_1 + \mathbf{e_2}~\); \textit{Images: } \(T(\mathbf{e}_1)\), \(T(\mathbf{e}_2)\), \(T(\mathbf{e}_1 + \mathbf{e_2})\)
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{21}
+    \item \(T(x,y) = (x,-y)\)
+    \item \(T(x,y) = (-x,y)\)
+    \item \(T(x,y) = (x,x+y)\)
+    \item \(T(x,y) = (x+y,y)\)
+    \item \(T(x,y) = (-2x,3y)\)
+    \item \(T(x,y) = (x,0)\)
+\end{enumerate}
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        State the domain and codomain of each of the following linear transformations \(T\), then find the standard matrix for \(T\).
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{27}
+    \item \(T(x,y) = (x+2y, x-2y)\)
+    \item \(T(x,y) = (2x-3y,x-y,y-4x)\)
+    \item \(T(x,y,z) = (x+y, x-y, z-x)\)
+    \item \(T(x,y) = (5x+y,0,4x-5y)\)
+    \item \(T(x,y,z) = (3x-2z,2y-z)\)
+    \item \(T(x_1,x_2,x_3,x_4) = (x_4,x_3,x_1 + x_2,x_1)\)
+    \item \(T(x_1,x_2,x_3,x_4) = (0,0,0,0)\)
+    \item \(T(x,y) = (x+2y, x-2y, x,y)\)
+\end{enumerate}
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        Use a counterexample to show that the following functions are not linear transformations. 
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{35}
+    \item \(T(x,y) = (x^2,y)\)
+    \item \(T(x,y) = (x,y,xy)\)
+\end{enumerate}
 \pagebreak 
 
 \section*{3.2.1: Transformations on the unit square}
-\textit{blah blah blah} 
+\textit{More drawings?! It's like they want me to suffer. } 
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        Given the following matrices \(A\) and transformations \(T\), sketch the effect of the corresponding linear transformation \(T_A(x,y)\) on the unit square. 
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{37}
+    \item \(\begin{bmatrix}
+        -1&0 \\ 1&-1
+    \end{bmatrix}\)
+    \item \(\begin{bmatrix}
+        0&1 \\ 2&1
+    \end{bmatrix}\)
+    \item \(T(x,y) = (x+y,y)\)
+    \item \(T(x,y) = (y-x,y+x)\)
+\end{enumerate}
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        Given how the following linear transformations act on the unit square, identify the standard matrix \(A\) associated with this transformation, and also give an explicit formula
+        for the output of \(T_A(x,y)\) in terms of \((x,y)\). 
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{41}
+    \item image
+    \item image
+\end{enumerate}
+\begin{center}
+    \colorbox{CornflowerBlue!50}{
+    \begin{minipage}[c]{0.9\textwidth}
+        \centering
+        For items \#44 to \#48, all rotations mentioned are counterclockwise rotations with respect to the origin. 
+    \end{minipage}
+    }
+\end{center}
+\begin{enumerate}
+    \setcounter{enumi}{43}
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors.\footnote{Oh, so now they use the arrow notation.} Use the rotation matrix to verify that they will still be perpendicular even if you rotate both 
+    by the same amount \(\theta\). 
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors. Use the rotation matrix to verify that their dot product is preserved even if you rotate both 
+    by the same amount \(\theta\). 
+    \item Let \(\overrightarrow{u}\) be a 2D vector. Use the rotation matrix to verify that its length is preserved even if you rotate it by some angle \(\theta\). 
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that the angle \(\alpha\) between them is preserved even if you rotate both by the same amount \(\theta\). 
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that projecting \(\overrightarrow{u}\) onto \(\overrightarrow{v}\) and then rotating the projection by \(\theta\) gives
+    the same result as rotating \(\overrightarrow{u}\) and \(\overrightarrow{v}\) by \(\theta\) and then projecting the rotated \(\overrightarrow{u}\) onto the rotated \(\overrightarrow{v}\). 
+    \item Show that:\begin{enumerate}
+        \item reflecting across the line \(y = x\)
+        \item and then reflectiong across the line \(x=0\)
+    \end{enumerate} produces the same result as a \(90^\circ\) counterclockwise rotation.
+    \item Show that:\begin{enumerate}
+        \item reflecting across the line \(y=x\)
+        \item and then reflectiong across the line \(y = -x\) 
+    \end{enumerate} produces the same result as a \(180^\circ\) rotation. 
+    \item Show that:\begin{enumerate}
+        \item rotating \(90^\circ\) counterclockwise
+        \item and then reflecting across the line \(x=0\)
+    \end{enumerate} gives the same result as\begin{enumerate}
+        \item reflecting across the line \(x=0\)
+        \item and then rotating \(90^\circ\) \textbf{clockwise}.
+    \end{enumerate}
+    \begin{minipage}{.14\textwidth}
+        \vspace{0pt}
+        \includegraphics[width=2cm]{nerd_maddy.png}
+    \end{minipage}%
+    \fbox{
+    \begin{minipage}{.76\textwidth}
+        \vspace{0pt}
+        \textbf{Nerd Interjection!} I've marked the next few items as difficult, but after the second LT, I don't trust Aldrich enough to not give them as test items, particularly the last three. The trigonometric identities 
+        you can probably get away with ignoring, but it might be good to look at the algebra and logic in items \#53 to \#55. I'll try my best to explain.  
+    \end{minipage}%
+    }
+    \RenewDocumentCommand{\labelenumi}{}{\fcolorbox{magenta}{white}{\textbf{\arabic{enumi}}}}
+    \item Use rotation matrices to prove the following trigonometric identities:\begin{enumerate}
+        \RenewDocumentCommand{\labelenumii}{}{\fcolorbox{CornflowerBlue!50}{white}{\textbf{\alph{enumii}}}}
+        \item \(\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta\)\begin{proof}
+            Let \(A\) be the matrix for rotating a vector by an angle \(\alpha\) and \(B\) be the matrix for rotating by an angle \(\beta\). Finally, let \(X\) be the matrix for rotating by their sum, \(\alpha + \beta\). Then,\[
+                A = \begin{bmatrix}
+                    \cos\alpha&-\sin\alpha \\ \sin\alpha&\cos\alpha
+                \end{bmatrix};~B = \begin{bmatrix}
+                    \cos\beta&-\sin\beta \\ \sin\beta&\cos\beta
+                \end{bmatrix};~X =  \begin{bmatrix}
+                    \cos(\alpha + \beta)&-\sin(\alpha + \beta) \\ \sin(\alpha+\beta)&\cos(\alpha + \beta)
+                \end{bmatrix}.
+            \] We know that rotation by \(\alpha\) followed by rotation by \(\beta\) (or vice versa) is the same as rotating by their sum. This in turn means, that if we multiply \(A\) and \(B\) by any given vector \(\mathbf{v}\) in \(\mathbb{R}^2\), then the effect on \(\mathbf{v}\)
+            should be the same as if we had just multiplied \(X\) by it instead. Thus, \(BA\,\mathbf{v} = X\mathbf{v}\), so \(BA = X\). Performing the matrix multiplication, we have\begin{align*}
+                &\begin{bmatrix}
+                    \cos\alpha&-\sin\alpha \\ \sin\alpha&\cos\alpha
+                \end{bmatrix} \\
+                \begin{bmatrix}
+                    \cos\beta&-\sin\beta \\ \sin\beta&\cos\beta
+                \end{bmatrix} & \begin{bmatrix}
+                    \cos\alpha\cos\beta - \sin\alpha\sin\beta&-\sin\alpha\cos\beta-\cos\alpha\sin\beta \\ 
+                    \cos\alpha\sin\beta + \sin\alpha\cos\beta& -\sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix}.
+            \end{align*} Setting this to be equal to \(X\) and rearranging some terms,\[
+                \begin{bmatrix}
+                    \cos\alpha\cos\beta - \sin\alpha\sin\beta&-\sin\alpha\cos\beta-\cos\alpha\sin\beta \\ 
+                    \colorbox{Periwinkle!42}{\(\sin\alpha\cos\beta + \cos\alpha\sin\beta\)}& -\sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix} = \begin{bmatrix}
+                    \cos(\alpha + \beta)&-\sin(\alpha + \beta) \\ \colorbox{Periwinkle!42}{\(\sin(\alpha+\beta)\)}&\cos(\alpha + \beta)
+                \end{bmatrix} 
+            \] gives us \(\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta\), which proves the identity. 
+        \end{proof}
+        \item \(\sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta\)\begin{proof}
+            Taking \(A\) from the previous item, let \(B^-\) be the matrix for rotating an angle by \(-\beta\) (in other words, \(\beta\) in the other direction, clockwise). Finally, let \(X^-\) be the matrix for rotating by their sum, \(\alpha -\beta\). Then, 
+            (Recall that \(\sin(-\theta) = -\sin\theta\) and \(\cos(-\theta) = \cos\theta\).)\[
+                A = \begin{bmatrix}
+                    \cos\alpha&-\sin\alpha \\ \sin\alpha&\cos\alpha
+                \end{bmatrix};~B^- = \begin{bmatrix}
+                    \cos\beta&\sin\beta \\ -\sin\beta&\cos\beta
+                \end{bmatrix};~X^- =  \begin{bmatrix}
+                    \cos(\alpha - \beta)&-\sin(\alpha - \beta) \\ \sin(\alpha-\beta)&\cos(\alpha - \beta)
+                \end{bmatrix}.
+            \] We know that rotation by \(\alpha\) followed by rotation by \(-\beta\) (or vice versa) is the same as rotating by their sum. Thus, by similar reasoning as \textbf{a} above, \(B^-A = X^-\). Performing the matrix multiplication, we have\begin{align*} 
+                &\begin{bmatrix}
+                    \cos\alpha&-\sin\alpha \\ \sin\alpha&\cos\alpha
+                \end{bmatrix} \\
+                \begin{bmatrix}
+                    \cos\beta&\sin\beta \\ -\sin\beta&\cos\beta
+                \end{bmatrix} & \begin{bmatrix}
+                    \cos\alpha\cos\beta + \sin\alpha\sin\beta&-\sin\alpha\cos\beta+\cos\alpha\sin\beta \\ 
+                    -\cos\alpha\sin\beta + \sin\alpha\cos\beta& \sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix}.
+            \end{align*} Setting this to be equal to \(X\) and rearranging some terms, \[
+                \begin{bmatrix}
+                    \cos\alpha\cos\beta + \sin\alpha\sin\beta&-\sin\alpha\cos\beta+\cos\alpha\sin\beta \\ 
+                    \colorbox{Periwinkle!42}{\(\sin\alpha\cos\beta -\cos\alpha\sin\beta\)} & \sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix} = \begin{bmatrix}
+                    \cos(\alpha - \beta)&-\sin(\alpha - \beta) \\ \colorbox{Periwinkle!42}{\(\sin(\alpha-\beta)\)}&\cos(\alpha - \beta)
+                \end{bmatrix}
+            \] gives us \(\sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta\), which proves the identity. 
+        \end{proof}
+        \item \(\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta\)\begin{proof}
+            From \textbf{a}, we have\[
+                \begin{bmatrix}
+                    \colorbox{Periwinkle!42}{\(\cos\alpha\cos\beta - \sin\alpha\sin\beta\)}&-\sin\alpha\cos\beta-\cos\alpha\sin\beta \\ 
+                    \sin\alpha\cos\beta + \cos\alpha\sin\beta& -\sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix} = \begin{bmatrix}
+                    \colorbox{Periwinkle!42}{\(\cos(\alpha + \beta)\)}&-\sin(\alpha + \beta) \\ \sin(\alpha+\beta)&\cos(\alpha + \beta)
+                \end{bmatrix},
+            \] so \(\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta\), which proves the identity. 
+        \end{proof}
+        \item \(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\)\begin{proof}
+            From \textbf{b}, we have\[
+                \begin{bmatrix}
+                    \colorbox{Periwinkle!42}{\(\cos\alpha\cos\beta + \sin\alpha\sin\beta\)}&-\sin\alpha\cos\beta+\cos\alpha\sin\beta \\ 
+                    \sin\alpha\cos\beta - \cos\alpha\sin\beta& \sin\alpha\sin\beta + \cos\alpha\cos\beta
+                \end{bmatrix} = \begin{bmatrix}
+                    \colorbox{Periwinkle!42}{\(\cos(\alpha - \beta)\)}&-\sin(\alpha - \beta) \\ \sin(\alpha-\beta)&\cos(\alpha - \beta)
+                \end{bmatrix},
+            \] so \(\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta\), which proves the identity. 
+        \end{proof}
+    \end{enumerate}
+    \item Let \(T(x,y)\) be a transformation that takes in a point \((x,y)\) and reflects it across the line that is a \(\theta\) counterclockwise rotation away from the positive \(x\)-axis. 
+    Find the standard matrix for \(T\). (This is called the reflection matrix.)
+    \item Use the reflection matrix to verify that every reflection is its own inverse. 
+    \item Show that, in general, the composition of any two reflections correspond to some rotation. If the reflections are represented using angles \(\alpha\) and \(\beta\), express the angle of rotation in terms of \(\alpha\) and \(\beta\). 
+\end{enumerate}
 \pagebreak 
 
 \section*{3.2.2: Orthogonality and projection}
