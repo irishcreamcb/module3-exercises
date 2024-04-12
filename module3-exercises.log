@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  12 APR 2024 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  12 APR 2024 22:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -614,7 +614,7 @@ File: nerd_maddy.png Graphic file (type png)
 Package pdftex.def Info: nerd_maddy.png  used on input line 425.
 (pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
  [5] [6]
-LaTeX Font Info:    Trying to load font information for OT1+iwonalc on input line 489.
+LaTeX Font Info:    Trying to load font information for OT1+iwonalc on input line 491.
  (C:\Users\Noah\AppData\Local\Programs\MiKTeX\tex/latex/iwona\ot1iwonalc.fd
 File: ot1iwonalc.fd 2008/07/22 v0.995 font definition file for OT1/iwonalc (MW)
 
@@ -638,29 +638,39 @@ LaTeX Info: Font shape OT1/iwonalc/mx/it has incorrect series value `mx'.
             It should not contain an `m'! Please correct it.
             Found on input line 35.
 
-) [7] [8]
+)
 File: nerd_maddy.png Graphic file (type png)
 <use nerd_maddy.png>
-Package pdftex.def Info: nerd_maddy.png  used on input line 604.
+Package pdftex.def Info: nerd_maddy.png  used on input line 543.
 (pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
- [9] [10] [11] [12] (module3-exercises.aux)
+ [7]
+File: nerd_maddy.png Graphic file (type png)
+<use nerd_maddy.png>
+Package pdftex.def Info: nerd_maddy.png  used on input line 601.
+(pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
+ [8] [9] [10] [11]
+File: nerd_maddy.png Graphic file (type png)
+<use nerd_maddy.png>
+Package pdftex.def Info: nerd_maddy.png  used on input line 763.
+(pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
+ [12] [13] [14] [15] (module3-exercises.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15648 strings out of 474436
- 305567 string characters out of 5742426
+ 15752 strings out of 474436
+ 307996 string characters out of 5742426
  1964190 words of memory out of 5000000
- 37686 multiletter control sequences out of 15000+600000
+ 37790 multiletter control sequences out of 15000+600000
  632885 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,24n,87p,1259b,438s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,24n,87p,1259b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacl.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacli.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacm.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonam.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on module3-exercises.pdf (12 pages, 217456 bytes).
+Output written on module3-exercises.pdf (15 pages, 227137 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
