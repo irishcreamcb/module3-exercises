@@ -603,7 +603,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
         \fbox{
         \begin{minipage}{.76\textwidth}
             \vspace{0pt}
-            \textbf{Nerd Interjection!} in preparation for transformations on the unit square later on, think about what it would look like if the three vectors \(\mathbf{e}_1\), \(\mathbf{e}_2\), and \(\mathbf{e}_1 + \mathbf{e}_2\)
+            \textbf{Nerd Interjection!} In preparation for transformations on the unit square later on, think about what it would look like if the three vectors \(\mathbf{e}_1\), \(\mathbf{e}_2\), and \(\mathbf{e}_1 + \mathbf{e}_2\)
             formed a square. You can imagine two lines connecting the arrowheads of the two basis vectors to the arrowhead of their sum. What would the square look like after these transformations? In the first two, it would still be a 
             square, but in these previous two, clearly that isn't the case. 
         \end{minipage}%
@@ -649,7 +649,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
                 \draw[black!20] (-1.25,1.25) grid (3.25,-1.25);
                 \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
                 \draw[black!60,latex-latex] (0,-1.25) -- (0,1.25) node[above left] {\(y\)};
-                \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below right] {\(T(\mathbf{e}_1)\)};
+                \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick] (0,0) node[above right] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
             \end{tikzpicture}
@@ -666,14 +666,177 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \end{center}
 \begin{enumerate}
     \setcounter{enumi}{27}
-    \item \(T(x,y) = (x+2y, x-2y)\)
-    \item \(T(x,y) = (2x-3y,x-y,y-4x)\)
-    \item \(T(x,y,z) = (x+y, x-y, z-x)\)
-    \item \(T(x,y) = (5x+y,0,4x-5y)\)
-    \item \(T(x,y,z) = (3x-2z,2y-z)\)
-    \item \(T(x_1,x_2,x_3,x_4) = (x_4,x_3,x_1 + x_2,x_1)\)
-    \item \(T(x_1,x_2,x_3,x_4) = (0,0,0,0)\)
-    \item \(T(x,y) = (x+2y, x-2y, x,y)\)
+    \item \(T(x,y) = (x+2y, x-2y)\)\begin{solution}
+        By inspection, the transformation takes in a vector with two elements and outputs a vector with two elements. Thus, its domain and codomain are both \(\mathbb{R}^2\).\par 
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^2\) and combine them into one \(2 \times 2\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Big|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1
+                    \end{bmatrix}
+                \end{pmatrix}
+            \end{bmatrix} = \begin{bmatrix}
+                1&2\\1&-2
+            \end{bmatrix}
+        \] is the standard matrix for \(T\).
+    \end{solution}
+    \begin{minipage}{.14\textwidth}
+        \vspace{0pt}
+        \includegraphics[width=2cm]{nerd_maddy.png}
+    \end{minipage}%
+    \fbox{
+    \begin{minipage}{.76\textwidth}
+        \vspace{0pt}
+        \textbf{Nerd Interjection!} ``Applying'' the function just means inputting the basis vectors and taking the output. So, in the previous example, just to be explicit, we have\[
+            T\!\begin{pmatrix}
+                \begin{bmatrix}
+                    1\\0
+                \end{bmatrix}
+            \end{pmatrix} = \begin{bmatrix}
+                1\\1
+            \end{bmatrix}~\text{and}~T\!\begin{pmatrix}
+                \begin{bmatrix}
+                    0\\1
+                \end{bmatrix}
+            \end{pmatrix} = \begin{bmatrix}
+                2\\-2
+            \end{bmatrix},
+        \]which we then combine simply by putting them next to each other to get our standard matrix. 
+    \end{minipage}%
+    }
+    \item \(T(x,y) = (2x-3y,x-y,y-4x)\)\begin{solution}
+        By inspection, the transformation takes in a vector with two elements and outputs a vector with three elements. Thus, its domain is \(\mathbb{R}^2\) and its codomain is \(\mathbb{R}^3\).\par 
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^2\) and combine them into one \(3 \times 2\) matrix\footnote{Matrices are always notated in row by column. Why? Probably has something 
+        to do with how you multiply them.}. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Big|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1
+                    \end{bmatrix}
+                \end{pmatrix}
+            \end{bmatrix} = \begin{bmatrix}
+                2&-3\\1&-1\\-4&1
+            \end{bmatrix}
+        \] is the standard matrix for \(T\). 
+    \end{solution}
+    \item \(T(x,y,z) = (x+y, x-y, z-x)\)\begin{solution}
+        By inspection, the transformation takes in a vector with three elements and outputs a vector with three elements. Thus, its domain and codomain are both \(\mathbb{R}^3\).\par 
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^3\) and combine them into one \(3 \times 3\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\0\\1
+                    \end{bmatrix}
+                \end{pmatrix}
+            \end{bmatrix} = \begin{bmatrix}
+                1&1&0\\1&-1&0\\-1&0&1
+            \end{bmatrix}
+        \] is the standard matrix for \(T\).
+    \end{solution}
+    \item \(T(x,y) = (5x+y,0,4x-5y)\)\begin{solution}
+        By inspection, the transformation takes in a vector with two elements and outputs a vector with three elements. Thus, its domain is \(\mathbb{R}^2\) and its codomain is \(\mathbb{R}^3\).\par
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^2\) and combine them into one \(3\times 2\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Big|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1
+                    \end{bmatrix}
+                \end{pmatrix} 
+            \end{bmatrix} = \begin{bmatrix}
+                5&1\\0&0\\4&-5
+            \end{bmatrix}
+        \] is the standard matrix for \(T\).
+    \end{solution}
+    \item \(T(x,y,z) = (3x-2z,2y-z)\)\begin{solution}
+        By inspection, the transformation takes in a vector with three elements and outputs a vector with two elements. Thus, its domain is \(\mathbb{R}^3\) and its codomain is \(\mathbb{R}^2\).\par
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^3\) and combine them into one \(2\times 3\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\0\\1
+                    \end{bmatrix}
+                \end{pmatrix}
+            \end{bmatrix} = \begin{bmatrix}
+                3&0&-2\\0&2&-1           
+            \end{bmatrix} 
+        \] is the standard matrix for \(T\).
+    \end{solution}
+    \item \(T(x_1,x_2,x_3,x_4) = (x_4,x_3,x_1 + x_2,x_1)\)\begin{solution}
+        By inspection, the transformation takes in a vector with four elements and outputs a vector with four elements. Thus, its domain and codomain are \(\mathbb{R}^4\).\par
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^4\) and combine them into one \(4\times 4\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0\\0\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.6}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1\\0\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.6}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\0\\1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.6}{\Bigg|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\0\\0\\1
+                    \end{bmatrix}
+                \end{pmatrix}
+            \end{bmatrix} = \begin{bmatrix}
+                0&0&0&1\\0&0&1&0\\1&1&0&0\\1&0&0&0
+            \end{bmatrix} 
+        \] is the standard matrix for \(T\).
+    \end{solution}
+    \item \(T(x_1,x_2,x_3,x_4) = (0,0,0,0)\)\hspace{10pt}[This is \textbf{vector annihilation}.]\begin{solution}
+        We \textit{could} do the whole she-bang (who she bangin? HOHOHO) that we did earlier, but since we recognize this as turning all the elements to zero, it should be pretty obvious 
+        what matrix we'd have to multiply a vector by to do that, which is the \(4\times 4\) zero matrix. 
+    \end{solution}
+    \item \(T(x,y) = (x+2y, x-2y, x,y)\)\begin{solution}
+        By inspection, the transformation takes in a vector with two elements and outputs a vector with three elements. Thus, its domain is \(\mathbb{R}^2\) and its codomain is \(\mathbb{R}^4\).\par
+        To find the standard matrix of \(T\), we need to apply \(T\) to the standard basis vectors of \(\mathbb{R}^2\) and combine them into one \(4\times 2\) matrix. Thus,\[
+            \begin{bmatrix}
+                T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        1\\0
+                    \end{bmatrix}
+                \end{pmatrix}\scalebox{1.3}{\Big|}T\!\begin{pmatrix}
+                    \begin{bmatrix}
+                        0\\1
+                    \end{bmatrix}
+                \end{pmatrix} 
+            \end{bmatrix} = \begin{bmatrix}
+                1&2\\1&-2\\1&0\\0&1
+            \end{bmatrix}
+        \] is the standard matrix of \(T\).
+    \end{solution}
 \end{enumerate}
 \begin{center}
     \colorbox{CornflowerBlue!50}{
@@ -691,7 +854,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \pagebreak 
 
 \section*{3.2.1: Transformations on the unit square}
-\textit{More drawings?! It's like they want me to suffer. } 
+\textit{More drawings?! It's like they want me to suffer. My copy-pasting and Ctrl-F'ing skills can only take me so far. } 
 \begin{center}
     \colorbox{CornflowerBlue!50}{
     \begin{minipage}[c]{0.9\textwidth}

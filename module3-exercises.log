@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  12 APR 2024 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  13 APR 2024 19:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -648,12 +648,17 @@ File: nerd_maddy.png Graphic file (type png)
 <use nerd_maddy.png>
 Package pdftex.def Info: nerd_maddy.png  used on input line 601.
 (pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
- [8] [9] [10] [11]
+ [8]
 File: nerd_maddy.png Graphic file (type png)
 <use nerd_maddy.png>
-Package pdftex.def Info: nerd_maddy.png  used on input line 763.
+Package pdftex.def Info: nerd_maddy.png  used on input line 689.
 (pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
- [12] [13] [14] [15] (module3-exercises.aux)
+ [9] [10] [11] [12]
+File: nerd_maddy.png Graphic file (type png)
+<use nerd_maddy.png>
+Package pdftex.def Info: nerd_maddy.png  used on input line 926.
+(pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
+ [13] [14] [15] [16] (module3-exercises.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -668,9 +673,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,24n,87p,1259b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacl.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacli.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacm.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonam.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on module3-exercises.pdf (15 pages, 227137 bytes).
+Output written on module3-exercises.pdf (16 pages, 233431 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
