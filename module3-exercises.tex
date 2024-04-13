@@ -846,10 +846,30 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
     \end{minipage}
     }
 \end{center}
+\begin{minipage}{.14\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=2cm]{nerd_maddy.png}
+\end{minipage}%
+\fbox{
+\begin{minipage}{.76\textwidth}
+    \vspace{0pt}
+    \textbf{Nerd Interjection!} As a refresher, these are the properties of linear transformations:\[
+        T_A(\mathbf{u} + \mathbf{v}) = T_A(\mathbf{u}) + T_A(\mathbf{v})\quad\text{and}\quad T_A(k\mathbf{v}) = kT_A(\mathbf{v}).
+    \]Thus, if we can prove that the following linear transformations break one of the properties, that will be sufficient to show that they are nonlinear. 
+\end{minipage}%
+}
 \begin{enumerate}
     \setcounter{enumi}{35}
-    \item \(T(x,y) = (x^2,y)\)
-    \item \(T(x,y) = (x,y,xy)\)
+    \item \(T(x,y) = (x^2,y)\)\begin{proof}
+        Let \(\mathbf{v} = \mathbf{u} = (1,1)\). Then, substituing \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (4,2)\). However, if 
+        we instead transform them individually and then get their sum, we have \(T(\mathbf{u}) + T(\mathbf{v}) = (1,1) + (1,1) = (2,2)\). Thus, 
+        the transformation is nonlinear. 
+    \end{proof}
+    \item \(T(x,y) = (x,y,xy)\)\begin{proof}
+        Let \(\mathbf{v} = \mathbf{u} = (1,1)\). Then, substituting \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (2,2,4)\). However, if 
+        we instead transform them individually and then get their sum, we have \(T(\mathbf{u}) + T(\mathbf{v}) = (1,1,1) + (1,1,1) = (2,2,2)\). Thus, 
+        the transformation is nonlinear. 
+    \end{proof}
 \end{enumerate}
 \pagebreak 
 
@@ -928,8 +948,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
     \fbox{
     \begin{minipage}{.76\textwidth}
         \vspace{0pt}
-        \textbf{Nerd Interjection!} I've marked the next few items as difficult, but after the second LT, I don't trust Aldrich enough to not give them as test items, particularly the last three. The trigonometric identities 
-        you can probably get away with ignoring, but it might be good to look at the algebra and logic in items \#53 to \#55. I'll try my best to explain.  
+        \textbf{Nerd Interjection!} I've marked the next few items as difficult (first ones in the whole reviewer; did you notice?), but after the second LT, I don't know if I trust Aldrich enough to not give them as test items. They \textit{are} 
+        considerably difficult, but technically speaking we do have all the tools we need to solve them. They just need some clever reasoning and intuition. I'll try my best to explain them, \textit{just in case}. 
     \end{minipage}%
     }
     \RenewDocumentCommand{\labelenumi}{}{\fcolorbox{magenta}{white}{\textbf{\arabic{enumi}}}}
