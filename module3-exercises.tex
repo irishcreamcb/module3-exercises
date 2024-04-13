@@ -885,14 +885,151 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \end{center}
 \begin{enumerate}
     \setcounter{enumi}{37}
-    \item \(\begin{bmatrix}
+    \item \(A= \begin{bmatrix}
         -1&0 \\ 1&-1
-    \end{bmatrix}\)
-    \item \(\begin{bmatrix}
+    \end{bmatrix}\)\begin{solution}
+        We can start by figuring out how \(A\) changes the standard basis vectors, then form the square from there. Multiplying \(A\) to \(\mathbf{e}_1\) and \(\mathbf{e}_2\),\[
+            A\mathbf{e}_1 = \begin{bmatrix}
+                -1\\1
+            \end{bmatrix} \quad \text{and} \quad A\mathbf{e}_2 = \begin{bmatrix}
+                0\\-1
+            \end{bmatrix},
+        \]which now lets us draw the unit square. 
+    \end{solution}
+    \begin{figure}[h]
+        \centering
+        \begin{tikzpicture} 
+            \draw[black!20] (-0.75,2.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) rectangle (2,2);
+            \node[font={\Huge\bfseries}] at (1,1) {box};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)}; 
+        \end{tikzpicture}
+        \hspace{10pt}
+        \begin{tikzpicture}
+            \draw[black!20] (-2.75,2.75) grid (0.75,-2.75);
+            \draw[black!60,latex-latex] (-2.75,0) -- (0.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-2.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (-2,2) -- (-2,0) -- (0,-2) -- cycle;
+            \node[font={\Huge\bfseries},rotate=180,yslant=-1] at (-1,0) {box}; 
+            \draw[black!90,very thick,-stealth] (0,0) -- (-2,2) node[above] {\(A\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,-2) node[above right] {\(A\mathbf{e}_2\)};
+        \end{tikzpicture}
+        \caption{The function inverts the square to the negative quadrant then shears it upward in the \(y\)-direction.}
+    \end{figure}
+    \item \(A= \begin{bmatrix}
         0&1 \\ 2&1
-    \end{bmatrix}\)
-    \item \(T(x,y) = (x+y,y)\)
-    \item \(T(x,y) = (y-x,y+x)\)
+    \end{bmatrix}\)\begin{solution}
+        We can start by figuring out how \(A\) changes the standard basis vectors, then form the square from there. Multiplying \(A\) to \(\mathbf{e}_1\) and \(\mathbf{e}_2\),\[
+            A\mathbf{e}_1 = \begin{bmatrix}
+                0\\2
+            \end{bmatrix} \quad \text{and} \quad A\mathbf{e}_2 = \begin{bmatrix}
+                1\\1
+            \end{bmatrix},
+        \]which now lets us draw the unit square (see next page for figure).
+    \end{solution}
+    \begin{minipage}{.14\textwidth}
+        \vspace{0pt}
+        \includegraphics[width=2cm]{nerd_maddy.png}
+    \end{minipage}%
+    \fbox{
+    \begin{minipage}{.76\textwidth}
+        \vspace{0pt}
+        \textbf{Nerd Interjection!} If you look at the graph, you'll no doubt notice that this transformation is a reflection. How can we quickly tell if a matrix transform is a reflection 
+        and not just a rotation? Visually, we can check if the standard basis vectors have ``swapped'', as in Figure 8. We can also check the matrix itself. If either the top left corner
+        or bottom right corner is zero, then it's a reflection. 
+    \end{minipage}%
+    }
+    \begin{figure}[p]
+        \centering
+        \begin{tikzpicture} 
+            \draw[black!20] (-0.75,2.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) rectangle (2,2);
+            \node[font={\Huge\bfseries}] at (1,1) {box};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)}; 
+        \end{tikzpicture}
+        \hspace{10pt}
+        \begin{tikzpicture}
+            \draw[black!20] (-0.75,6.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,6.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (2,2) -- (2,6) -- (0,4) -- cycle; 
+            \node[font={\Huge\bfseries},rotate=270,xslant=-1,xscale=2] at (1,3) {\reflectbox{box}};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,4) node[above left] {\(A\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above right] {\(A\mathbf{e}_2\)};
+        \end{tikzpicture}
+        \caption{(\#39) The function reflects the square then stretches and shears it upwards in the \(y\)-direction.}
+    \end{figure}
+    \begin{figure}[p]
+        \centering
+        \begin{tikzpicture} 
+            \draw[black!20] (-0.75,2.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) rectangle (2,2);
+            \node[font={\Huge\bfseries}] at (1,1) {box};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)}; 
+        \end{tikzpicture}
+        \hspace{10pt}
+        \begin{tikzpicture}
+            \draw[black!20] (-0.75,2.75) grid (4.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (4.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (2,2) -- (4,2) -- (2,0) -- cycle;
+            \node[font={\Huge\bfseries},xslant=1] at (2,1) {box}; 
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below right] {\(T(\mathbf{e}_1)\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above right] {\(T(\mathbf{e}_2)\)};
+        \end{tikzpicture}
+        \caption{(\#40) The function shears the unit square to the right in the \(x\)-direction.}
+    \end{figure}
+    \begin{figure}[p]
+        \centering
+        \begin{tikzpicture} 
+            \draw[black!20] (-0.75,2.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) rectangle (2,2);
+            \node[font={\Huge\bfseries}] at (1,1) {box};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)}; 
+        \end{tikzpicture}
+        \hspace{10pt}
+        \begin{tikzpicture}
+            \draw[black!20] (-2.75,4.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-2.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,4.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (2,2) -- (0,4) -- (-2,2) -- cycle;
+            \node[font={\Huge\bfseries},rotate=315] at (0,2) {\reflectbox{box}}; 
+            \draw[black!90,very thick,-stealth] (0,0) -- (-2,2) node[above left] {\(T(\mathbf{e}_1)\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above right] {\(T(\mathbf{e}_2)\)};
+        \end{tikzpicture}
+        \caption{(\#41) The function reflects the square across the \(y\)-axis then rotates the it by \(45^\circ\), expanding it as it goes. }
+    \end{figure}
+    \item \(T(x,y) = (x+y,y)\)\begin{solution}
+        We can start by figuring out how \(T\) changes the standard basis vectors, then form the square from there. Inputting \(\mathbf{e}_1\) and \(\mathbf{e}_2\) into \(T\),\[
+            T(\mathbf{e}_1) = \begin{bmatrix}
+                1\\0
+            \end{bmatrix} \quad \text{and} \quad T(\mathbf{e}_2) = \begin{bmatrix}
+                1\\1
+            \end{bmatrix},
+        \]which now lets us draw the unit square (see next page for figure). 
+    \end{solution}
+    \pagebreak
+    \item \(T(x,y) = (y-x,y+x)\)\begin{solution}
+        We can start by figuring out how \(T\) changes the standard basis vectors, then form the square from there. Inputting \(\mathbf{e}_1\) and \(\mathbf{e}_2\) into \(T\),\[
+            T(\mathbf{e}_1) = \begin{bmatrix}
+                -1\\1
+            \end{bmatrix} \quad \text{and} \quad T(\mathbf{e}_2) = \begin{bmatrix}
+                1\\1
+            \end{bmatrix},
+        \]which now lets us draw the unit square (see previous page for figure). 
+    \end{solution}
 \end{enumerate}
 \begin{center}
     \colorbox{CornflowerBlue!50}{
@@ -949,7 +1086,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
     \begin{minipage}{.76\textwidth}
         \vspace{0pt}
         \textbf{Nerd Interjection!} I've marked the next few items as difficult (first ones in the whole reviewer; did you notice?), but after the second LT, I don't know if I trust Aldrich enough to not give them as test items. They \textit{are} 
-        considerably difficult, but technically speaking we do have all the tools we need to solve them. They just need some clever reasoning and intuition. I'll try my best to explain them, \textit{just in case}. 
+        considerably difficult, but technically speaking we do have all the tools we need to solve them. They just need some clever reasoning and intuition. I'll try my best to explain them, \textit{just in case}. If you are going to study these, I'd advise looking at items \#53 to \#55 more than you do \#52. 
     \end{minipage}%
     }
     \RenewDocumentCommand{\labelenumi}{}{\fcolorbox{magenta}{white}{\textbf{\arabic{enumi}}}}
