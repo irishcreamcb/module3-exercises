@@ -861,12 +861,12 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \begin{enumerate}
     \setcounter{enumi}{35}
     \item \(T(x,y) = (x^2,y)\)\begin{proof}
-        Let \(\mathbf{v} = \mathbf{u} = (1,1)\). Then, substituing \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (4,2)\). However, if 
+        Let \(\mathbf{v} = \mathbf{u} \defeq (1,1)\). Then, substituing \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (4,2)\). However, if 
         we instead transform them individually and then get their sum, we have \(T(\mathbf{u}) + T(\mathbf{v}) = (1,1) + (1,1) = (2,2)\). Thus, 
         the transformation is nonlinear. 
     \end{proof}
     \item \(T(x,y) = (x,y,xy)\)\begin{proof}
-        Let \(\mathbf{v} = \mathbf{u} = (1,1)\). Then, substituting \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (2,2,4)\). However, if 
+        Let \(\mathbf{v} = \mathbf{u} \defeq (1,1)\). Then, substituting \(\mathbf{u} + \mathbf{v}\) into \(T\) gives us \(T(\mathbf{u} + \mathbf{v}) = T(2,2) = (2,2,4)\). However, if 
         we instead transform them individually and then get their sum, we have \(T(\mathbf{u}) + T(\mathbf{v}) = (1,1,1) + (1,1,1) = (2,2,2)\). Thus, 
         the transformation is nonlinear. 
     \end{proof}
@@ -930,18 +930,6 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \end{bmatrix},
         \]which now lets us draw the unit square (see next page for figure).
     \end{solution}
-    \begin{minipage}{.14\textwidth}
-        \vspace{0pt}
-        \includegraphics[width=2cm]{nerd_maddy.png}
-    \end{minipage}%
-    \fbox{
-    \begin{minipage}{.76\textwidth}
-        \vspace{0pt}
-        \textbf{Nerd Interjection!} If you look at the graph, you'll no doubt notice that this transformation is a reflection. How can we quickly tell if a matrix transform is a reflection 
-        and not just a rotation? Visually, we can check if the standard basis vectors have ``swapped'', as in Figure 8. We can also check the matrix itself. If either the top left corner
-        or bottom right corner is zero, then it's a reflection. 
-    \end{minipage}%
-    }
     \begin{figure}[p]
         \centering
         \begin{tikzpicture} 
@@ -1005,7 +993,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \draw[black!60,latex-latex] (-2.75,0) -- (2.75,0) node[above right] {\(x\)};
             \draw[black!60,latex-latex] (0,-0.75) -- (0,4.75) node[above left] {\(y\)};
             \draw[black!60,fill=Periwinkle!22] (0,0) -- (2,2) -- (0,4) -- (-2,2) -- cycle;
-            \node[font={\Huge\bfseries},rotate=315] at (0,2) {\reflectbox{box}}; 
+            \node[font={\Huge\bfseries},rotate=315] at (0,2) {\scalebox{1.5}{\reflectbox{box}}}; 
             \draw[black!90,very thick,-stealth] (0,0) -- (-2,2) node[above left] {\(T(\mathbf{e}_1)\)};
             \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above right] {\(T(\mathbf{e}_2)\)};
         \end{tikzpicture}
@@ -1042,8 +1030,55 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \end{center}
 \begin{enumerate}
     \setcounter{enumi}{41}
-    \item image
-    \item image
+    \item \centering
+        \begin{tikzpicture}[baseline=25]
+            \draw[black!20] (-4.75,2.75) grid (2.75,-0.75);
+            \draw[black!60,latex-latex] (-4.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-0.75) -- (0,2.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (-4,2) -- (-2,2) -- (2,0) -- cycle;
+            \node[font={\Huge\bfseries},rotate=-26.565,xslant=2,xscale=2,yscale=0.5] at (-1,1) {\reflectbox{box}}; 
+            \draw[black!90,very thick,-stealth] (0,0) -- (-4,2) node[above] {\(T(\mathbf{e}_1)\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below] {\(T(\mathbf{e}_2)\)};
+        \end{tikzpicture}
+        \begin{solution}
+            The linear transformation turns \(\mathbf{e}_1\) into \((-2,1)\) and \(\mathbf{e}_2\) into \((1,0)\). Putting these together gives us the standard matrix of the transformation, which is\[
+                A = \begin{bmatrix}
+                    -2&1\\1&0
+                \end{bmatrix}.    
+            \] To find \(T_A(x,y)\) in terms of \(x\) and \(y\), we simply multiply \(A\) by an arbitrary given vector \(\mathbf{v}= (x,y)\) and see what the result is. Doing so gives us\[
+                A\mathbf{v} = \begin{bmatrix}
+                    -2&1\\1&0
+                \end{bmatrix} \begin{bmatrix}
+                    x\\y
+                \end{bmatrix} = \begin{bmatrix}
+                    y-2x\\x
+                \end{bmatrix},
+            \] and thus, \(T_A(x,y) = (y-2x,x)\) is the linear transformation that gives the result above. 
+        \end{solution}
+    \item \begin{tikzpicture}[baseline=-75]
+            \draw[black!20] (-0.75,0.75) grid (2.75,-4.75);
+            \draw[black!60,latex-latex] (-0.75,0) -- (2.75,0) node[above right] {\(x\)};
+            \draw[black!60,latex-latex] (0,-4.75) -- (0,0.75) node[above left] {\(y\)};
+            \draw[black!60,fill=Periwinkle!22] (0,0) -- (2,-2) -- (2,-4) -- (0,-2) -- cycle;
+            \node[font={\Huge\bfseries},rotate=-90,xslant=1] at (1,-2) {box}; 
+            \draw[black!90,very thick,-stealth] (0,0) -- (0,-2) node[below left] {\(T(\mathbf{e}_1)\)};
+            \draw[black!90,very thick,-stealth] (0,0) -- (2,-2) node[above right] {\(T(\mathbf{e}_2)\)};
+        \end{tikzpicture}
+        \begin{solution}
+            The linear transformation turns \(\mathbf{e}_1\) into \((0,-1)\) and \(\mathbf{e}_2\) into \((1,-1)\). Putting these together gives us the standard matrix of the transformation, which is\[
+                A = \begin{bmatrix}
+                    0&1\\-1&-1
+                \end{bmatrix}.    
+            \] To find \(T_A(x,y)\) in terms of \(x\) and \(y\), we simply multiply \(A\) by an arbitrary given vector \(\mathbf{v}= (x,y)\) and see what the result is. Doing so gives us\[
+                A\mathbf{v} = \begin{bmatrix}
+                    0&1\\-1&-1
+                \end{bmatrix} \begin{bmatrix}
+                    x\\y
+                \end{bmatrix} = \begin{bmatrix}
+                    y\\-x-y
+                \end{bmatrix},
+            \] and thus, \(T_A(x,y) = (y,-x-y)\) is the linear transformation that gives the result above. 
+        \end{solution}
 \end{enumerate}
 \begin{center}
     \colorbox{CornflowerBlue!50}{
@@ -1056,7 +1091,14 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \begin{enumerate}
     \setcounter{enumi}{43}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors.\footnote{Oh, so now they use the arrow notation.} Use the rotation matrix to verify that they will still be perpendicular even if you rotate both 
-    by the same amount \(\theta\). 
+    by the same amount \(\theta\).\begin{solution}
+        Recall that if two angles are perpendicular, their dot product will be equal to 0. Then, let \(\overrightarrow{u} \defeq (u_1,u_2)\) and \(\overrightarrow{v} \defeq (v_1,v_2)\), such that \(\overrightarrow{u} \cdot \overrightarrow{v} = 0\) (that is, 
+        \(u_1 v_1 + u_2 v_2 = 0\)). To rotate these by some angle \(\theta\), we multiply them by the rotation matrix, which is\[
+            \begin{bmatrix}
+                \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+            \end{bmatrix}.
+        \]
+    \end{solution}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors. Use the rotation matrix to verify that their dot product is preserved even if you rotate both 
     by the same amount \(\theta\). 
     \item Let \(\overrightarrow{u}\) be a 2D vector. Use the rotation matrix to verify that its length is preserved even if you rotate it by some angle \(\theta\). 
