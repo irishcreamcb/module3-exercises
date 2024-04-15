@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  15 APR 2024 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.14)  15 APR 2024 21:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -661,7 +661,7 @@ Package pdftex.def Info: nerd_maddy.png  used on input line 851.
  [11] [12] [13] [14] [15]
 File: nerd_maddy.png Graphic file (type png)
 <use nerd_maddy.png>
-Package pdftex.def Info: nerd_maddy.png  used on input line 1164.
+Package pdftex.def Info: nerd_maddy.png  used on input line 1174.
 (pdftex.def)             Requested size: 56.9055pt x 56.90189pt.
  [16] [17] [18] [19] [20] (module3-exercises.aux)
  ***********
@@ -670,15 +670,15 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15771 strings out of 474436
- 308336 string characters out of 5742426
+ 15772 strings out of 474436
+ 308352 string characters out of 5742426
  1964190 words of memory out of 5000000
- 37809 multiletter control sequences out of 15000+600000
- 639150 words of font info for 85 fonts, out of 8000000 for 9000
+ 37810 multiletter control sequences out of 15000+600000
+ 642281 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,24n,87p,1259b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacl.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacli.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonacm.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/nowacki/iwona/iwonam.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Noah/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on module3-exercises.pdf (20 pages, 247494 bytes).
+Output written on module3-exercises.pdf (20 pages, 250355 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

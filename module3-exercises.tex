@@ -498,8 +498,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} -- (0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -507,8 +507,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-1.25,1.25) grid (3.25,-3.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-3.25) -- (0,1.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-3.25) -- (0,0) node[below left,font={\small}] {O} -- (0,-2) node[below left,font={\small}] {-1} --  (0,1.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below right] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,-2) node[below right] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,-2) node[below] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
@@ -521,8 +521,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} --(0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -530,8 +530,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-3.25,3.25) grid (1.25,-1.25);
-                \draw[black!60,latex-latex] (-3.25,0) -- (1.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-3.25,0) -- (-2,0) node[below right,font={\small}] {-1} -- (1.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below right,font={\small}] {O} -- (0,2) node[below right,font={\small}] {1} (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (-2,0) node[above left] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above left] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (-2,2) node[above] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
@@ -556,8 +556,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} --(0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -565,8 +565,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-1.25,5.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,5.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} -- (0,2) node[below left,font={\small}] {1} -- (0,4) node[below left,font={\small}] {2} --(0,5.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[below right] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,4) node[above] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
@@ -579,8 +579,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} --(0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -588,8 +588,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-1.25,3.25) grid (5.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (5.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (0,0) node[below left,font={\small}] {O} -- (2,0) node[below left,font={\small}] {1} --(4,0) node[below left,font={\small}] {2} --  (5.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below right] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above right] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (4,2) node[above] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
@@ -615,8 +615,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} --(0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -624,8 +624,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-5.25,7.25) grid (1.25,-1.25);
-                \draw[black!60,latex-latex] (-5.25,0) -- (1.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,7.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-5.25,0) --(-4,0) node[below right,font={\small}] {-2}--(-2,0) node[below right,font={\small}] {-1}--(0,0) node[below right,font={\small}] {O} -- (1.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) --(0,2) node[below right,font={\small}] {1}--(0,4) node[below right,font={\small}] {2}--(0,6) node[below right,font={\small}] {3}-- (0,7.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (-4,0) node[above right] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,6) node[above left] {\(T(\mathbf{e}_2)\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (-4,6) node[above] {\(T(\mathbf{e}_1 + \mathbf{e_2})\)};
@@ -638,8 +638,8 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \centering
             \begin{tikzpicture} 
                 \draw[black!20] (-1.25,3.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
-                \draw[black!60,latex-latex] (0,-1.25) -- (0,3.25) node[above left] {\(y\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (2,0) node[below left,font={\small}] {1} -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (0,-1.25) -- (0,0) node[below left,font={\small}] {O} --(0,2) node[below left,font={\small}] {1} -- (0,3.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[above right] {\(\mathbf{e}_1\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (0,2) node[above right] {\(\mathbf{e}_2\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,2) node[above] {\(\mathbf{e}_1 + \mathbf{e_2}\)};
@@ -647,7 +647,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
             \hspace{10pt}
             \begin{tikzpicture}
                 \draw[black!20] (-1.25,1.25) grid (3.25,-1.25);
-                \draw[black!60,latex-latex] (-1.25,0) -- (3.25,0) node[above right] {\(x\)};
+                \draw[black!60,latex-latex] (-1.25,0) -- (0,0) node[below left,font={\small}] {O} -- (3.25,0) node[above right] {\(x\)};
                 \draw[black!60,latex-latex] (0,-1.25) -- (0,1.25) node[above left] {\(y\)};
                 \draw[black!90,very thick,-stealth] (0,0) -- (2,0) node[below] {\(T(\mathbf{e}_1)\)};
                 \draw[black!90,very thick] (0,0) node[above right] {\(T(\mathbf{e}_2)\)};
@@ -1092,7 +1092,7 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
     \setcounter{enumi}{43}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors.\footnote{Oh, so now they use the arrow notation.} Use the rotation matrix to verify that they will still be perpendicular even if you rotate both 
     by the same amount \(\theta\).\begin{proof}
-        Recall that if two angles are perpendicular, their dot product will be equal to 0. Then, let \(\overrightarrow{u} \defeq (u_1,u_2)\) and \(\overrightarrow{v} \defeq (v_1,v_2)\), such that \(\overrightarrow{u} \cdot \overrightarrow{v} = 0\) (that is, 
+        Recall that if two vectors are perpendicular, their dot product will be equal to 0. Then, let \(\overrightarrow{u} \defeq (u_1,u_2)\) and \(\overrightarrow{v} \defeq (v_1,v_2)\), such that \(\overrightarrow{u} \cdot \overrightarrow{v} = 0\) (that is, 
         \(u_1 v_1 + u_2 v_2 = 0\)). To rotate these by some angle \(\theta\), we multiply them by the rotation matrix, which is\[
             \begin{bmatrix}
                 \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
@@ -1113,19 +1113,24 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
                 v_1 \cos\theta - v_2\sin\theta \\ v_1\sin\theta + v_2\cos\theta
             \end{bmatrix}. \label{v_rot}
         \end{align} Finding the dot product of~\eqref{u_rot} and~\eqref{v_rot} (I'm doing this in two lines because they won't fit in one),\begin{align}
-            (u_1 \cos\theta - u_2\sin\theta)(v_1 \cos\theta - v_2\sin\theta) &= u_1 v_1 \cos^2\theta + u_2 v_2 \sin^2\theta - u_1 v_2\sin\theta\cos\theta - u_2 v_1 \sin\theta\cos\theta \notag \\ 
+            (u_1 \cos\theta - u_2\sin\theta)\,(v_1 \cos\theta - v_2\sin\theta) &= u_1 v_1 \cos^2\theta + u_2 v_2 \sin^2\theta - u_1 v_2\sin\theta\cos\theta - u_2 v_1 \sin\theta\cos\theta \notag \\ 
             &= u_1 v_1 \cos^2\theta + u_2 v_2 \sin^2\theta - \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \label{1_dot} \\ 
-            (u_1 \sin\theta + u_2\cos\theta)(v_1 \sin\theta + v_2\cos\theta) &= u_1 v_1 \sin^2\theta + u_2 v_2 \cos^2\theta + u_1 v_2\sin\theta\cos\theta + u_2 v_1 \sin\theta\cos\theta \notag \\ 
+            (u_1 \sin\theta + u_2\cos\theta)\,(v_1 \sin\theta + v_2\cos\theta) &= u_1 v_1 \sin^2\theta + u_2 v_2 \cos^2\theta + u_1 v_2\sin\theta\cos\theta + u_2 v_1 \sin\theta\cos\theta \notag \\ 
             &= u_1 v_1 \sin^2\theta + u_2 v_2 \cos^2\theta + \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \label{2_dot}. 
         \end{align}Adding~\eqref{1_dot} and~\eqref{2_dot} together to complete the dot product,\begin{align*}
             &= \sin^2\theta \, (u_1 v_1 + u_2 v_2) + \cos^2\theta \, (u_1 v_1 + u_2 v_2) - \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) + \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \\ 
             &= \sin^2\theta \, (0) + \cos^2\theta \, (0) = 0. 
         \end{align*} Thus, the dot product of the two rotated vectors is 0, which means they are perpendicular. 
     \end{proof}
-    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors. Use the rotation matrix to verify that their dot product is preserved even if you rotate both 
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors.\footnote{The original item said ``perpendicular 2D vectors'', but I removed it because that would just be the same as item \#44. This way, it's a more 
+    relevant question of showing that the dot product is the same after rotation. And, it's a surprise tool that will help us later!} Use the rotation matrix to verify that their dot product is preserved even if you rotate both 
     by the same amount \(\theta\).\begin{proof}
-        See the solution for item \#44. I don't know why these are separate items. 
+        We can extract a portion of the solution in item \#44 after we find the dot product of the two rotated vectors and simply ignore the condition in that proof that \(u_1 v_1 + u_2 v_2 = 0\). Instead, we simply consider a generalized dot product of \(\overrightarrow{u} \cdot \overrightarrow{v} = u_1 v_1 + u_2 v_2\). Then\begin{align*} 
+            \overrightarrow{u}_\text{rot} \cdot \overrightarrow{v}_\text{rot} &= \sin^2\theta \, (u_1 v_1 + u_2 v_2) + \cos^2\theta \, (u_1 v_1 + u_2 v_2) - \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) + \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \\ 
+            &= (u_1 v_1 + u_2 v_2 ) \, (\sin^2\theta + \cos^2\theta).    
+        \end{align*} Since \(\sin^2\theta + \cos^2\theta = 1\), this simplifies to \(u_1 v_1 + u_2 v_2\), which is the original dot product, \(\overrightarrow{u} \cdot \overrightarrow{v}\). Thus, the dot product is preserved even when you rotate the vectors by some value \(\theta\). 
     \end{proof}
+    \pagebreak
     \item Let \(\overrightarrow{u}\) be a 2D vector. Use the rotation matrix to verify that its length is preserved even if you rotate it by some angle \(\theta\).\begin{proof}
         Let \(\overrightarrow{u} \defeq (u_1, u_2)\), with a length of \(\big|\!\big| \overrightarrow{u} \big|\!\big| = \sqrt{u_1^2 + u_2^2}\). Multiplying the rotation matrix by \(\overrightarrow{u}\),\[
             \begin{bmatrix}
@@ -1138,10 +1143,15 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
         \] Finding the magnitude of this rotated vector gives us\begin{align*}
             \big|\!\big| \overrightarrow{u}_{\text{rot}} \,\big|\!\big| &= \sqrt{{(u_1\cos\theta - u_2\sin\theta)}^2 + {(u_1\sin\theta + u_2\cos\theta)}^2} \\ 
             &= \sqrt{u_1^2\cos^2\theta + u_2^2\sin^2\theta - 2u_1 u_2 \sin\theta\cos\theta + u_1^2\sin^2\theta + u_2^2\cos^2\theta + 2u_1 u_2 \sin\theta\cos\theta} \\ 
-            &= \sqrt{u_1^2 \, (\sin^2\theta + \cos^2\theta) + u_2^2\, (\sin^2\theta + \cos^2\theta)} = \sqrt{u_1^2 + v_1^2}, 
-        \end{align*} since \(\sin^2\theta + \cos^2\theta = 1\). Thus, the magnited of \(\overrightarrow{u}\) is maintained even when it is rotated.
+            &= \sqrt{u_1^2 \, (\sin^2\theta + \cos^2\theta) + u_2^2\, (\sin^2\theta + \cos^2\theta)} = \sqrt{u_1^2 + u_2^2}, 
+        \end{align*} since \(\sin^2\theta + \cos^2\theta = 1\). Thus, the magnitude of \(\overrightarrow{u}\) is maintained even when it is rotated.
     \end{proof}
-    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that the angle \(\alpha\) between them is preserved even if you rotate both by the same amount \(\theta\). 
+    \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that the angle \(\alpha\) between them is preserved even if you rotate both by the same amount \(\theta\).\begin{proof}
+        Let \(\overrightarrow{u} \defeq (u_1,u_2)\) and \(\overrightarrow{v} \defeq (v_1,v_2)\). Then, the angle \(\alpha\) between them is given by\[
+            \alpha = \cos^{-1} \Biggl(\frac{\overrightarrow{u}\cdot\overrightarrow{v}}{\big|\!\big| \overrightarrow{u} \big|\!\big| \big|\!\big| \overrightarrow{v} \big|\!\big|}\Biggr). 
+        \] This proof actually becomes quite trivial because of all the previous items. We know that the dot product of two vectors stays the same even after rotating, and we know that the magnitude of a vector 
+        stays the same even after rotating. Thus, the fraction will not be changed at all, and the angle \(\alpha\) between them will be preserved. 
+    \end{proof}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that projecting \(\overrightarrow{u}\) onto \(\overrightarrow{v}\) and then rotating the projection by \(\theta\) gives
     the same result as rotating \(\overrightarrow{u}\) and \(\overrightarrow{v}\) by \(\theta\) and then projecting the rotated \(\overrightarrow{u}\) onto the rotated \(\overrightarrow{v}\). 
     \item Show that:\begin{enumerate}
