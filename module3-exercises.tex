@@ -1091,17 +1091,56 @@ font for vector notation isn't that bad. Let's try it for a little bit. }
 \begin{enumerate}
     \setcounter{enumi}{43}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors.\footnote{Oh, so now they use the arrow notation.} Use the rotation matrix to verify that they will still be perpendicular even if you rotate both 
-    by the same amount \(\theta\).\begin{solution}
+    by the same amount \(\theta\).\begin{proof}
         Recall that if two angles are perpendicular, their dot product will be equal to 0. Then, let \(\overrightarrow{u} \defeq (u_1,u_2)\) and \(\overrightarrow{v} \defeq (v_1,v_2)\), such that \(\overrightarrow{u} \cdot \overrightarrow{v} = 0\) (that is, 
         \(u_1 v_1 + u_2 v_2 = 0\)). To rotate these by some angle \(\theta\), we multiply them by the rotation matrix, which is\[
             \begin{bmatrix}
                 \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
             \end{bmatrix}.
-        \]
-    \end{solution}
+        \] Multiplying this to both \(\overrightarrow{u}\) and \(\overrightarrow{v}\) gives us\begin{align}
+            \begin{bmatrix}
+                \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+            \end{bmatrix} \begin{bmatrix}
+                u_1\\u_2
+            \end{bmatrix} &= \begin{bmatrix}
+                u_1 \cos\theta - u_2\sin\theta \\ u_1\sin\theta + u_2\cos\theta 
+            \end{bmatrix} \label{u_rot} \\ 
+            \begin{bmatrix}
+                \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+            \end{bmatrix} \begin{bmatrix}
+                v_1\\v_2
+            \end{bmatrix} &= \begin{bmatrix}
+                v_1 \cos\theta - v_2\sin\theta \\ v_1\sin\theta + v_2\cos\theta
+            \end{bmatrix}. \label{v_rot}
+        \end{align} Finding the dot product of~\eqref{u_rot} and~\eqref{v_rot} (I'm doing this in two lines because they won't fit in one),\begin{align}
+            (u_1 \cos\theta - u_2\sin\theta)(v_1 \cos\theta - v_2\sin\theta) &= u_1 v_1 \cos^2\theta + u_2 v_2 \sin^2\theta - u_1 v_2\sin\theta\cos\theta - u_2 v_1 \sin\theta\cos\theta \notag \\ 
+            &= u_1 v_1 \cos^2\theta + u_2 v_2 \sin^2\theta - \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \label{1_dot} \\ 
+            (u_1 \sin\theta + u_2\cos\theta)(v_1 \sin\theta + v_2\cos\theta) &= u_1 v_1 \sin^2\theta + u_2 v_2 \cos^2\theta + u_1 v_2\sin\theta\cos\theta + u_2 v_1 \sin\theta\cos\theta \notag \\ 
+            &= u_1 v_1 \sin^2\theta + u_2 v_2 \cos^2\theta + \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \label{2_dot}. 
+        \end{align}Adding~\eqref{1_dot} and~\eqref{2_dot} together to complete the dot product,\begin{align*}
+            &= \sin^2\theta \, (u_1 v_1 + u_2 v_2) + \cos^2\theta \, (u_1 v_1 + u_2 v_2) - \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) + \sin\theta\cos\theta \, (u_1 v_2 + u_2 v_1 ) \\ 
+            &= \sin^2\theta \, (0) + \cos^2\theta \, (0) = 0. 
+        \end{align*} Thus, the dot product of the two rotated vectors is 0, which means they are perpendicular. 
+    \end{proof}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be perpendicular 2D vectors. Use the rotation matrix to verify that their dot product is preserved even if you rotate both 
-    by the same amount \(\theta\). 
-    \item Let \(\overrightarrow{u}\) be a 2D vector. Use the rotation matrix to verify that its length is preserved even if you rotate it by some angle \(\theta\). 
+    by the same amount \(\theta\).\begin{proof}
+        See the solution for item \#44. I don't know why these are separate items. 
+    \end{proof}
+    \item Let \(\overrightarrow{u}\) be a 2D vector. Use the rotation matrix to verify that its length is preserved even if you rotate it by some angle \(\theta\).\begin{proof}
+        Let \(\overrightarrow{u} \defeq (u_1, u_2)\), with a length of \(\big|\!\big| \overrightarrow{u} \big|\!\big| = \sqrt{u_1^2 + u_2^2}\). Multiplying the rotation matrix by \(\overrightarrow{u}\),\[
+            \begin{bmatrix}
+                \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+            \end{bmatrix} \begin{bmatrix}
+                u_1 \\ u_2
+            \end{bmatrix} = \begin{bmatrix}
+                u_1\cos\theta - u_2\cos\theta \\ u_1\sin\theta + u_2\cos\theta
+            \end{bmatrix}.
+        \] Finding the magnitude of this rotated vector gives us\begin{align*}
+            \big|\!\big| \overrightarrow{u}_{\text{rot}} \,\big|\!\big| &= \sqrt{{(u_1\cos\theta - u_2\sin\theta)}^2 + {(u_1\sin\theta + u_2\cos\theta)}^2} \\ 
+            &= \sqrt{u_1^2\cos^2\theta + u_2^2\sin^2\theta - 2u_1 u_2 \sin\theta\cos\theta + u_1^2\sin^2\theta + u_2^2\cos^2\theta + 2u_1 u_2 \sin\theta\cos\theta} \\ 
+            &= \sqrt{u_1^2 \, (\sin^2\theta + \cos^2\theta) + u_2^2\, (\sin^2\theta + \cos^2\theta)} = \sqrt{u_1^2 + v_1^2}, 
+        \end{align*} since \(\sin^2\theta + \cos^2\theta = 1\). Thus, the magnited of \(\overrightarrow{u}\) is maintained even when it is rotated.
+    \end{proof}
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that the angle \(\alpha\) between them is preserved even if you rotate both by the same amount \(\theta\). 
     \item Let \(\overrightarrow{u}\) and \(\overrightarrow{v}\) be 2D vectors. Verify that projecting \(\overrightarrow{u}\) onto \(\overrightarrow{v}\) and then rotating the projection by \(\theta\) gives
     the same result as rotating \(\overrightarrow{u}\) and \(\overrightarrow{v}\) by \(\theta\) and then projecting the rotated \(\overrightarrow{u}\) onto the rotated \(\overrightarrow{v}\). 
